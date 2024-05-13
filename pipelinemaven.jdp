@@ -1,0 +1,25 @@
+pipeline {
+    agent any 
+    stages {
+        stage('Stage 1') {
+            steps {
+                https://github.com/sumit123-456/studentapp-ui.git
+            }
+        }
+         stage('Build') {
+            steps {
+                sh 'mvn clean package'
+            }
+         }
+        stage('Test') {
+            steps {
+                echo "Test successful"
+            }
+        }
+         stage('Delivery') {
+            steps {
+                echo "Delivery successful"
+            }
+        }
+    }
+}
