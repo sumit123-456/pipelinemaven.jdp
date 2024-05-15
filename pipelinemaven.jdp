@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Stage 1') {
             steps {
-               https://github.com/sumit123-456/springboot-java-poject.git
+              checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: '58aa8a5f-0f8e-41f4-82ca-1cb9a7a6a906', url: 'https://github.com/sumit123-456/pipelinemaven.jdp.git']])
             }
         }
          stage('Build') {
